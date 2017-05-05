@@ -1,9 +1,11 @@
-# DumpCreds 2.1
-* Author: QDBA
-* Version: Version 2.1.0 Build 1004
-* Target: Windows 10
+﻿# DumpCreds 2.1
+* Original Author: QDBA
+* Edited by: Kevin Gage
+* Tested: Windows 10 english, Windows 8.1 english
 
 ## Description
+
+** I took all of QDBA's great work and debugged it to work on my english language windows 10 machine.  Also tested on windows 8.1
 
 ** !!!!! works only at Bash Bunny with FW 1.1 !!!!! **
 
@@ -26,8 +28,7 @@ Dumps the usernames & plaintext passwords from
   If you plugin the BB every payload has 1min 30sfor doing the job. At 1min 30s every payload stops. (Thats a FW 1.1 issue)  
  
 # Debug 
-If you want some debug information, create a file with name "DEBUG" in the payload folder
-you got the debug information in \loot\DumpCred_2.1\log.txt Folder
+For simplicitys sake I removed QDBA's debug functions.
  
 
 ## Configuration
@@ -35,38 +36,31 @@ you got the debug information in \loot\DumpCred_2.1\log.txt Folder
 None needed. 
 
 ## Requirements
-
+https://github.com/CoreSecurity/impacket
 
 ## Download
 
 
-https://github.com/qdba/bashbunny-payloads/tree/master/payloads/library/DumpCreds_2.0
+https://github.com/KevinGage/bashbunny-payloads/tree/master/payloads/library/credentials/DumpCreds
 
 
 ## Install
 
 1. Put Bash Bunny in arming mode
 
-2. Coppy All Folders into the root of Bunny Flash Drive 
-	Mandatory 
-		* payloads/library/DumpCreds_2.1 --> the payload Files
-		  * payloads/library/DumpCreds_2.1/PS --> the Powershell scripts for the payload
-		* tools --> impacket tools (provide the smbserver.py) (not neccessary if you had already installed)
-	Not neccessary
-		* docs --> this doc file
-		* languages --> languauge files for DUCKY_LANG
+2. Copy the required files to the bash bunny(switchx is switch1 or switch2)
+	* payloads/switchx/payload.txt --> the payload file
+	* payloads/switchx/main.ps --> the main powershell script
+	* payloads/switchx/PS --> the data collection powershell scripts
+	* tools/impacket --> impacket tools (provide the smbserver.py) (not neccessary if you had already installed)
 				
 3. eject Bash Bunny safely!!
 
 4. Insert Bash Bunny in arming mode ( Impacket and languages will be installed ) 		
 
-5. Put all Files and Folders to payload from payloads /payloads/library/DumpCreds_2.1 to payloads/switch1 or payloads/switch2
+5. move switch in right position
 
-6. eject Bash Bunny safely 
-
-7. move switch in right position
-
-8. plugin Bash Bunny and have fun....! :-)
+6. plugin Bash Bunny and have fun....! :-)
 
 
 ## STATUS
@@ -93,10 +87,6 @@ https://forums.hak5.org/index.php?/topic/40582-payload-drumpcreds-20-wo-internet
 ## Credits
 
 to...... 
+https://github.com/qdba/bashbunny-payloads/tree/master/payloads/library/DumpCreds_2.0	QDBA << he wrote 99% of this thing!
 
 https://github.com/EmpireProject/Empire         Get-FoxDump.ps1, Invoke-M1m1k@tz.ps1, Invoke-PowerDump.ps1, Get-ChromeCreds.ps1
-
-## Changelog
-
-- Complete new payload.txt code for BashBunny 1.1
-- Added a lot of debug cod into the payload 

